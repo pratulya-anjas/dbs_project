@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Events</title>
+  <link rel="stylesheet" type="text/css" href="static/style2.css">
+</head>
+<body>
+  <h1>Events</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Event Date</th>
+        <th>Event Type</th>
+        <th>Customer ID</th>
+        <th>Venue ID</th>
+        <th>Budget</th>
+        <th>Equipment</th>
+        <th>Payments</th>
+        <th>Attendees</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for event in events %}
+        <tr>
+          <td>{{ event[0] }}</td>
+          <td>{{ event[1] }}</td>
+          <td>{{ event[2] }}</td>
+          <td>{{ event[3] }}</td>
+          <td>{{ event[4] }}</td>
+          <td>{{ event[5] }}</td>
+          <td>{{ event[6] }}</td>
+          <td>{{ event[7] }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

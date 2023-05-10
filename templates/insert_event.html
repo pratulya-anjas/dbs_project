@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Insert Event</title>
+  <link rel="stylesheet" type="text/css" href="static/style1.css">
+</head>
+<body>
+  <h1>Insert Event</h1>
+  <form action="/insert_event" method="POST">
+    <label for="event_id">Event ID:</label>
+    <input type="text" id="event_id" name="event_id" required>
+
+    <label for="event_type">Event Type:</label>
+    <input type="text" id="event_type" name="event_type" required>
+
+    <label for="customer_id">Customer ID:</label>
+    <input type="text" id="customer_id" name="customer_id" required>
+
+    <label for="venue_id">Venue ID:</label>
+    <input type="text" id="venue_id" name="venue_id" required>
+
+    <label for="budget">Budget:</label>
+    <input type="text" id="budget" name="budget" required>
+
+    <label for="equipment">Equipment:</label>
+    <input type="text" id="equipment" name="equipment" required>
+
+    <label for="payments">Payments:</label>
+    <input type="text" id="payments" name="payments" required>
+
+    <label for="attendees">Number of Attendees:</label>
+    <input type="text" id="attendees" name="attendees" required>
+
+    <input type="submit" value="Submit">
+
+    <a href="/events">See all the events lined up</a>
+  </form>
+
+  
+</body>
+</html>
