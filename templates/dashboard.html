@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Management Dashboard</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		nav {
+			background-color: #333;
+			color: #fff;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 1rem;
+		}
+		nav ul {
+			list-style: none;
+			display: flex;
+			margin: 0;
+			padding: 0;
+		}
+		nav li {
+			margin-left: 1rem;
+		}
+		nav a {
+			color: #fff;
+			text-decoration: none;
+			padding: 0.5rem;
+		}
+		nav a:hover {
+			background-color: #555;
+		}
+		.container {
+			margin: 2rem;
+		}
+		h1 {
+			font-size: 2rem;
+			margin-top: 0;
+		}
+		@media screen and (max-width: 767px) {
+			nav {
+				flex-wrap: wrap;
+			}
+			nav ul {
+				flex-direction: column;
+				align-items: center;
+				width: 100%;
+			}
+			nav li {
+				margin: 0.5rem 0;
+			}
+			.container {
+				margin: 1rem;
+			}
+			h1 {
+				font-size: 1.5rem;
+				margin-top: 1rem;
+			}
+		}
+		.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+	</style>
+</head>
+<body>
+	<nav>
+		<h1>Event Management System</h1>
+		<ul>
+			<li><div class="dropdown">
+				<button class="dropbtn">Dropdown 
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="/insert_event">Link 1</a>
+				  <a href="/add_customer">Link 2</a>
+				  <a href="#">Link 3</a>
+				</div>
+			  </div> </li>
+			<li><a href="#" id="events-link">Events</a></li>
+			<li><a href="#" id="vendors-link">Vendors</a></li>
+			<li><a href="#" id="venues-link">Venues</a></li>
+			<li><a href="#" id="employees-link">Employees</a></li>
+			<li><a href="#" id="payments-link">Payments</a></li>
+			<li><a href="#" id="equipments-link">Equipments</a></li>
+		</ul>
+	</nav>
+	<div class="container">
+		<h1 id="main-heading">Welcome to the Event Management Dashboard</h1>
+		<p>Select a category from the navigation bar to get started.</p>
+	</div>
+	<script>
+		const eventsLink = document.getElementById("events-link");
+		const vendorsLink = document.getElementById("vendors-link");
+		const venuesLink = document.getElementById("venues-link");
+		const employeesLink = document.getElementById("employees-link");
+		const paymentsLink = document.getElementById("payments-link");
+		const equipmentsLink = document.getElementById("equipments-link");
+		const mainHeading = document.getElementById("main-heading");
+
+		eventsLink.addEventListener("click", () => {
+			mainHeading.textContent = "Events";
+			// Add code here to display event-related content
+		});
+
+		vendorsLink.addEventListener("click", () => {
+			mainHeading.textContent = "Vendors";
+			// Add code here to display vendor-related content
+		});
+
+		venuesLink.addEventListener("click", () => {
+			mainHeading.textContent = "Venues";
+			// Add code here to display venue-related content
+        });

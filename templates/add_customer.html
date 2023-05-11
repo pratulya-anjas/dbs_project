@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Customer</title>
+    <link rel="stylesheet" type="text/css" href="static/style4.css">
+  </head>
+  <body>
+    <h1>Add Customer</h1>
+    <form method="post" action="{{ url_for('add_customer') }}">
+      <label for="customer_id">Customer ID:</label>
+      <input type="text" name="customer_id" required>
+      <label for="customer_name">Customer Name:</label>
+      <input type="text" name="customer_name" required>
+      <label for="contact_no">Contact No:</label>
+      <input type="text" name="contact_no" required>
+      <label for="customer_address">Customer Address:</label>
+      <textarea name="customer_address" required></textarea>
+      <button type="submit">Add Customer</button>
+    </form>
+  </body>
+</html>
