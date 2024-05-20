@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payment Details</title>
+    <link rel="stylesheet" href="static/style6.css">
+</head>
+<body>
+    <h1>Payment Details</h1>
+    <table>
+        <tr>
+            <th>Payment ID</th>
+            <th>Amount</th>
+            <th>Payment Date</th>
+            <th>Event ID</th>
+        </tr>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row[0] }}</td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+            <td>{{ row[3] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

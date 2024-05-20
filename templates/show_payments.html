@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Payments</title>
+    <style>
+        body{
+            background-image: url("https://i.pinimg.com/564x/2e/46/3a/2e463aff88790f3a0923c1d5ca7a616c.jpg");
+        }
+        /* Table style */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #30aea8;
+        }
+        tr:nth-child(even) {
+            background-color: #17d797;
+        }
+        /* Page style */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            margin-top: 0;
+            padding: 20px;
+            background-color: #212823;
+            color: #fff;
+        }
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Payments</h1>
+    <div class="container">
+        <table>
+            <tr>
+                <th>Payment ID</th>
+                <th>Amount</th>
+                <th>Payment Date</th>
+                <th>Event ID</th>
+            </tr>
+            {% for payment in payments %}
+            <tr>
+                <td>{{ payment[0] }}</td>
+                <td>{{ payment[1] }}</td>
+                <td>{{ payment[2] }}</td>
+                <td>{{ payment[3] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

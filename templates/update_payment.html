@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Payment Amount</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://i.pinimg.com/564x/2e/46/3a/2e463aff88790f3a0923c1d5ca7a616c.jpg");
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+div {
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="radio"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+    </style>
+</head>
+<body>
+    <h1>Update Payment Amount</h1>
+    <form method="POST" action="/update_payment">
+        <div>
+            <label for="payment_id">Payment ID:</label>
+            <input type="text" name="payment_id" id="payment_id" required>
+        </div>
+        <div>
+            <label for="amount">Amount:</label>
+            <input type="text" name="amount" id="amount" required>
+        </div>
+        <div>
+            <label>Operation:</label>
+            <input type="radio" name="operation" value="increase" id="increase" required>
+            <label for="increase">Credit</label>
+            <input type="radio" name="operation" value="decrease" id="decrease" required>
+            <label for="decrease">Debit</label>
+        </div>
+        <div>
+            <input type="submit" value="Update Amount">
+        </div>
+    </form>
+    {% if message %}
+        <div>{{ message }}</div>
+    {% endif %}
+</body>
+</html>

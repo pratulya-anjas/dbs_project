@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customers</title>
+    <style>
+      /* Define some basic styles for the table */
+      body{
+        background-image: url("https://wallpaper.dog/large/11032562.jpg");
+      }
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th, td {
+        text-align: left;
+        padding: 8px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      th {
+        background-color: #cdd3ce;
+        color: #555555;
+        font-weight: bold;
+        font-size: 14px;
+        text-transform: uppercase;
+      }
+
+      td {
+        color: #333;
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      /* Add some hover effects for the table rows */
+      tr:hover {
+        background-color: #19dda6;
+      }
+
+      /* Add a title style for the heading */
+      h1 {
+        font-size: 32px;
+        margin-bottom: 16px;
+        text-align: center;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Customers</h1>
+    <table>
+      <tr>
+        <th>Customer ID</th>
+        <th>Customer Name</th>
+        <th>Contact No</th>
+        <th>Customer Address</th>
+      </tr>
+      {% for customer in customers %}
+      <tr>
+        <td>{{ customer['customer_id'] }}</td>
+        <td>{{ customer['customer_name'] }}</td>
+        <td>{{ customer['contact_no'] }}</td>
+        <td>{{ customer['customer_address'] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>

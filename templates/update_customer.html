@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Update Customer Information</title>
+	<style>
+		label {
+			display: inline-block;
+			width: 150px;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type=text] {
+			width: 250px;
+			padding: 5px;
+			border-radius: 3px;
+			border: 1px solid #ccc;
+		}
+		input[type=submit] {
+			margin-top: 10px;
+			padding: 5px 20px;
+			border-radius: 3px;
+			background-color: #337ab7;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+		}
+        body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-image: url("https://i.pinimg.com/564x/d7/0c/83/d70c839f0a2fa9743cf53a03d39daa32.jpg");
+}
+
+h1 {
+	font-size: 32px;
+	margin: 0 0 20px;
+}
+
+form {
+	margin: 20px 0;
+}
+
+label {
+	display: block;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+input[type=text] {
+	width: 100%;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+input[type=submit] {
+background-color: #337ab7;
+color: #fff;
+padding: 10px 20px;
+border-radius: 5px;
+border: none;
+cursor: pointer;
+}
+
+input[type=submit]:hover {
+background-color: #23527c;
+}
+
+	</style>
+</head>
+<body>
+	<h1>Update Customer Information</h1>
+	<form action="{{ url_for('update_customer') }}" method="post">
+		<label for="customer_id">Customer ID:</label>
+		<input type="text" name="customer_id" id="customer_id"><br>
+
+		<label for="customer_name">Customer Name:</label>
+		<input type="text" name="customer_name" id="customer_name"><br>
+
+		<label for="customer_no">Customer Phone Number:</label>
+		<input type="text" name="customer_no" id="customer_no"><br>
+
+		<label for="customer_address">Customer Address:</label>
+		<input type="text" name="customer_address" id="customer_address"><br>
+
+		<input type="submit" value="Update Customer">
+	</form>
+</body>
+</html>

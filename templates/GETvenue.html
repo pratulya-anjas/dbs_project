@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Venue Data</title>
+	<style>
+		body{
+			background-image: url("https://i.pinimg.com/736x/e2/4d/fd/e24dfd703d06f8ca6e7cdbd4b02e8949.jpg");
+		}
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+		th, td {
+			padding: 8px;
+			text-align: left;
+			border-bottom: 1px solid #ddd;
+		}
+		th {
+			background-color: #33b648;
+			color: #fff;
+		}
+		tr:nth-child(even) {
+			background-color: #f2f2f2;
+		}
+	</style>
+</head>
+<body>
+	<h1>Venue Data</h1>
+	<table>
+		<tr>
+			<th>Venue ID</th>
+			<th>Address</th>
+			<th>Venue Name</th>
+			<th>City</th>
+			<th>Contact Number</th>
+			<th>Cost Per Day</th>
+		</tr>
+		{% for row in data %}
+		<tr>
+			<td>{{ row[0] }}</td>
+			<td>{{ row[1] }}</td>
+			<td>{{ row[2] }}</td>
+			<td>{{ row[3] }}</td>
+			<td>{{ row[4] }}</td>
+			<td>{{ row[5] }}</td>
+		</tr>
+		{% endfor %}
+	</table>
+</body>
+</html>

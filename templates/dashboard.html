@@ -8,6 +8,7 @@
 			margin: 0;
 			padding: 0;
 			font-family: Arial, sans-serif;
+			background-image: url("https://i.pinimg.com/564x/d7/0c/83/d70c839f0a2fa9743cf53a03d39daa32.jpg");
 		}
 		nav {
 			background-color: #333;
@@ -38,8 +39,13 @@
 			margin: 2rem;
 		}
 		h1 {
+			text-align: center;
 			font-size: 2rem;
-			margin-top: 0;
+			margin-top: 0;;
+		}
+		p{
+			text-align: center;
+			
 		}
 		@media screen and (max-width: 767px) {
 			nav {
@@ -84,7 +90,7 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #555;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -113,21 +119,54 @@
 		<h1>Event Management System</h1>
 		<ul>
 			<li><div class="dropdown">
-				<button class="dropbtn">Dropdown 
+				<button class="dropbtn">Customer
 				  <i class="fa fa-caret-down"></i>
 				</button>
 				<div class="dropdown-content">
-				  <a href="/insert_event">Link 1</a>
-				  <a href="/add_customer">Link 2</a>
-				  <a href="#">Link 3</a>
+				  <a href="/add_customer">Add Customer</a>
+				  <a href="/get_customers">See The Customers in the database</a>
+				  <a href="/delete_customer">Delete Customer</a>
+				  <a href="/updatecustomer">Update Customer info</a>
 				</div>
 			  </div> </li>
-			<li><a href="#" id="events-link">Events</a></li>
-			<li><a href="#" id="vendors-link">Vendors</a></li>
-			<li><a href="#" id="venues-link">Venues</a></li>
-			<li><a href="#" id="employees-link">Employees</a></li>
-			<li><a href="#" id="payments-link">Payments</a></li>
-			<li><a href="#" id="equipments-link">Equipments</a></li>
+			<li><div class="dropdown">
+				<button class="dropbtn">Vendors
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="/vendor">Add Vendors</a>
+				  <a href="/vendors">See The Vendors in the database</a>
+				</div>
+			  </div></li>
+			<li><div class="dropdown">
+				<button class="dropbtn">Venues
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="/ADDvenue">Add Venue</a>
+				  <a href="/get_venues">See The Venues in the database</a>
+				</div>
+			  </div></li>
+			  <li><div class="dropdown">
+				<button class="dropbtn">Events
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="/insert_events">Add Events</a>
+				  <a href="/event-data">See all the events lined up</a>
+				</div>
+			  </div></li>
+			<li><div class="dropdown">
+				<button class="dropbtn">Payments
+				  <i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+				  <a href="/get_payments">Add payment record</a>
+				  <a href="/show_payments">See The Transaction history</a>
+				  <a href="/hemloo">Update transaction</a>
+				</div>
+			  </div></li>
+			
 		</ul>
 	</nav>
 	<div class="container">

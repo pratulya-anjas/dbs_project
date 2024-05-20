@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insert Payment Details</title>
+    <link rel="stylesheet" href="static/style5.css">
+</head>
+<body>
+    <h1>Insert Payment Details</h1>
+    <form method="POST" action="{{ url_for('submit') }}">
+        <label for="paymentid">Payment ID:</label>
+        <input type="text" id="paymentid" name="paymentid"><br>
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" name="amount"><br>
+
+        <label for="pdate">Payment Date:</label>
+        <input type="text" id="pdate" name="pdate"><br>
+
+        <label for="eventid">Event ID:</label>
+        <input type="text" id="eventid" name="eventid"><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

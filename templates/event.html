@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Form</title>
+	<style>
+		body{
+			background-image: url("https://i.pinimg.com/564x/2e/46/3a/2e463aff88790f3a0923c1d5ca7a616c.jpg");
+		}
+		label {
+			display: block;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+		input[type=text], input[type=date] {
+			padding: 5px;
+			margin-bottom: 10px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		select {
+			padding: 5px;
+			margin-bottom: 10px;
+			width: 100%;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+		}
+		input[type=submit] {
+			background-color: #33b733;
+			color: #fff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			border: none;
+			cursor: pointer;
+		}
+		input[type=submit]:hover {
+			background-color: #237c66;
+		}
+	</style>
+</head>
+<body>
+	<h1>Event Form</h1>
+	<form method="POST">
+		<label for="eventid">Event ID:</label>
+		<input type="text" id="eventid" name="eventid" required>
+
+		<label for="edate">Event Date:</label>
+		<input type="text" id="edate" name="edate" required>
+
+		<label for="customerid">Customer ID:</label>
+		<input type="text" id="customerid" name="customerid" required>
+
+		
+        <label for="eventtype">Event Type:</label>
+		<select id="eventtype" name="eventtype" required>
+			<option value="">Select event type</option>
+			<option value="Wedding">Wedding</option>
+			<option value="Corporate">Corporate</option>
+			<option value="Birthday">Birthday</option>
+		</select>
+
+		<label for="venueid">Venue ID:</label>
+		<input type="text" id="venueid" name="venueid" required>
+
+		<label for="paymentid">Payment ID:</label>
+		<input type="text" id="paymentid" name="paymentid" required>
+
+		<label for="vendorid">Vendor ID:</label>
+		<input type="text" id="vendorid" name="vendorid" required>
+
+		<label for="equipmentid">Equipment ID:</label>
+		<input type="text" id="equipmentid" name="equipmentid" required>
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>
